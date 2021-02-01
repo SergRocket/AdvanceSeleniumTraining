@@ -31,6 +31,7 @@ public class LoginPage extends BasePage {
         password.sendKeys(userName);
         click(loginButon);
         return new  LogoutPage(driver, logger);
+
         }
         public boolean curUrl (){
             boolean currentUrl = driver.getCurrentUrl().contains(AppConfig.expectedUrl);
@@ -38,6 +39,7 @@ public class LoginPage extends BasePage {
         }
 
         public String checkErrorMessage(){
+        waitForElementToBeVisible(error);
         return error.getText();
         }
 
@@ -45,7 +47,4 @@ public class LoginPage extends BasePage {
           waitForElementToBeVisible(success);
           return success.getText();
         }
-
-
-
  }

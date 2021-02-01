@@ -1,7 +1,6 @@
 package TestCases;
 
 import PageObjects.LoginPage;
-import PageObjects.LogoutPage;
 import PageObjects.WelcomePage;
 import Utils.AppConfig;
 import org.testng.Assert;
@@ -13,10 +12,8 @@ public class NegativeLoginTest extends BaseTest {
         WelcomePage welcomePage = new WelcomePage(driver, logger);
         welcomePage.openWelcomePage();
         LoginPage loginPage = welcomePage.openLoginPage();
-        LogoutPage logoutPage = loginPage.login(AppConfig.invalidUsername, AppConfig.invalidPassword);
+        loginPage.login(AppConfig.invalidUsername, AppConfig.invalidPassword);
         String failedLogin = loginPage.checkErrorMessage();
-
-        //Assert.assertTrue(loginPage.curUrl());
-        Assert.assertTrue(loginPage.checkErrorMessage().contains(AppConfig.errorMessage));
-    }
+        Assert.assertTrue(failedLogin.contains(AppConfig.errorMessage), "Login ws not completed");
+       }
 }

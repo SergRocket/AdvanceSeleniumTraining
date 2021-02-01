@@ -4,8 +4,6 @@ import PageObjects.LoginPage;
 import PageObjects.LogoutPage;
 import PageObjects.WelcomePage;
 import Utils.AppConfig;
-import org.checkerframework.checker.units.qual.A;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,6 +18,6 @@ public class PositiveLoginTest extends BaseTest {
         String successLogin = loginPage.getSuccessMessage();
         Assert.assertTrue(logoutPage.isLogoutButtonVisible());
         Assert.assertTrue(loginPage.curUrl());
-        Assert.assertTrue(Boolean.parseBoolean(successLogin), AppConfig.expectedSuccessMessage);
+        Assert.assertTrue(successLogin.contains(AppConfig.expectedSuccessMessage), "Login wan not completed");
         }
 }
