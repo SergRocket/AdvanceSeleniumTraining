@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/schimbay/Downloads/advence-selenium/advanced-selenium-webdriver-master/PART 2/Lecture 6/AdvanceSeleniumTraining">
+        <classes>
+            <class name="TestCases.WindownsTests">
+                <methods>
+                    <include name="newWinTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

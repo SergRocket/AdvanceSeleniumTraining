@@ -9,6 +9,11 @@ public class AppConfig {
     public static final String errorMessage = "Your username is invalid!";
     public static final String invalidPassword = "HR312";
     public static final String invalidUsername = "hr.doctor@hospn.io";
+    public static final String KeyPressUrl = "http://the-internet.herokuapp.com/key_presses";
+    public static final String urlFileupload = "http://the-internet.herokuapp.com/upload";
+    public static final String urlDrugDrop = "http://the-internet.herokuapp.com/drag_and_drop";
+    public static final String urlHover = "http://the-internet.herokuapp.com/hovers";
+    public static final String urlSlider = "http://the-internet.herokuapp.com/horizontal_slider";
 
     // Project configuration
     public static final int TIMEOUT = 6;
