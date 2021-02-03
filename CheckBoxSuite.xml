@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Serg/IdeaProjects/AdvanceSeleniumTraining">
-        <parameter name="browser" value="chrome" />
+        <parameter name="browser" value="chromeheadless" />
         <classes>
             <class name="TestCases.CheckBoxTest">
                 <methods>

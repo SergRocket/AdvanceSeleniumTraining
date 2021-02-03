@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="PositiveLogInTestSuite">
-    <test verbose="2" preserve-order="true" name="C:/Users/schimbay/Downloads/advence-selenium/advanced-selenium-webdriver-master/PART 2/Lecture 6/AdvanceSeleniumTraining">
-        <parameter name="browser" value="opera" />
+<suite name="PositiveLogInTestSuite-Android and iOS" verbose="1">
+    <test name="iOS positiveTest">
+        <parameter name="deviceName" value="Pixel 2" />
         <classes>
             <class name="TestCases.PositiveLoginTest">
                 <methods>
@@ -11,4 +11,5 @@
             </class>
         </classes>
     </test>
+
 </suite>

@@ -30,17 +30,21 @@ public class BaseTest {
     protected String testSuiteName;
     protected String testName;
     protected String testMethodName;
-    @Parameters({"browser", "chromeProfile"})
+    @Parameters({"browser", "chromeProfile", "deviceName"})
     @BeforeMethod
-    public void beforeLogin(Method method, @Optional("chrome") String browser, @Optional String profile, ITestContext testContext) {
+    public void beforeLogin(Method method, @Optional("chrome") String browser, @Optional String profile,
+                            @Optional String deviceName, ITestContext testContext) {
         String testName = testContext.getCurrentXmlTest().getName();
         logger = LogManager.getLogger(testName);
         BrowserDriverFactory browserDriverFactory = new BrowserDriverFactory(browser, logger);
-        //if(profile != null){
+        if(profile != null) {
             driver = browserDriverFactory.createChromeWithProfile(profile);
-        //}else {
-         //   driver = browserDriverFactory.createDriver();
-        //}
+        }else if (deviceName != null){
+            driver = browserDriverFactory.createdChromeWithMobileEmulation(deviceName);
+        }
+        else {
+            driver = browserDriverFactory.createDriver();
+        }
         driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, Duration.ofSeconds(AppConfig.TIMEOUT));
         driver.get(AppConfig.url);
