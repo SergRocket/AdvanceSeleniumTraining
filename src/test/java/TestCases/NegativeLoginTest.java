@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class NegativeLoginTest extends BaseTest {
     @Test(dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
-    public void invalidLog (Map<String, String> testData){
+    public void negativeLogInTest(Map<String, String> testData){
         String no= testData.get("no");
         String username= testData.get("username");
         String password= testData.get("password");

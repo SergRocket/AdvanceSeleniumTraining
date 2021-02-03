@@ -14,6 +14,7 @@ public class AppConfig {
     public static final String urlDrugDrop = "http://the-internet.herokuapp.com/drag_and_drop";
     public static final String urlHover = "http://the-internet.herokuapp.com/hovers";
     public static final String urlSlider = "http://the-internet.herokuapp.com/horizontal_slider";
+    public  static final String urlErrors = "http://the-internet.herokuapp.com/javascript_error";
 
     // Project configuration
     public static final int TIMEOUT = 6;

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test">
+    <listeners>
+        <listener class-name="TestCases.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/schimbay/Downloads/advence-selenium/advanced-selenium-webdriver-master/PART 2/Lecture 6/AdvanceSeleniumTraining">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="TestCases.CheckBoxTest">
+                <methods>
+                    <include name="checkBoxClick"/>
+                </methods>
+            </class>
+            <class name="TestCases.DropDownTest">
+                <methods>
+                    <include name="dropDownSelecting"/>
+                </methods>
+            </class>
+            <class name="TestCases.DrudAndDropTest">
+                <methods>
+                    <include name="dragAndDropTest"/>
+                </methods>
+            </class>
+            <class name="TestCases.KeyPressTest">
+                <methods>
+                    <include name="pressKeyTest"/>
+                    <include name="pressKeyOnPage"/>
+                </methods>
+            </class>
+            <class name="TestCases.Logout">
+                <methods>
+                    <include name="logoutTest"/>
+                </methods>
+            </class>
+            <class name="TestCases.NegativeLoginTest">
+                <methods>
+                    <include name="negativeLogInTest"/>
+                </methods>
+            </class>
+            <class name="TestCases.PositiveLoginTest">
+                <methods>
+                    <include name="ValidLogin"/>
+                </methods>
+            </class>
+            <class name="TestCases.SliderTest">
+                <methods>
+                    <include name="sliderTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

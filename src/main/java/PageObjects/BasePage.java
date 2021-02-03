@@ -122,5 +122,15 @@ public class BasePage {
         Actions actions= new Actions(driver);
         actions.moveToElement(element).build().perform();
     }
+    public void setCookie(Cookie cookie){
+        logger.info("Adding cookie: " + cookie.getDomain());
+        driver.manage().addCookie(cookie);
+        logger.info("Cookie added");
+    }
+
+    public String getCookie(String name){
+        logger.info("Getting value " + name);
+        return driver.manage().getCookieNamed(name).getValue();
+    }
 
 }
